@@ -1,5 +1,6 @@
 class Solution {
 public:
+    #define fast() ios_base::sync_with_stdio(0);cout.tie(0);cin.tie(0);srand(time(NULL))
     bool check(vector<int>& bloomDay, int m, int k,int curDay){
         int sum=0,paq=0;
         for(int i=0;i<bloomDay.size();i++){
@@ -17,6 +18,7 @@ public:
         
     int minDays(vector<int>& bloomDay, int m, int k) {
         int mx=0;
+        fast();
         for(int i=0;i<bloomDay.size();i++){
             mx=max(mx,bloomDay[i]);
         }

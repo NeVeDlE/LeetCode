@@ -17,7 +17,6 @@ public:
                 l=mid+1;
             }
             else{
-                cout<<mid<<endl;
                 r=mid-1;
                 ans=mid;
             }

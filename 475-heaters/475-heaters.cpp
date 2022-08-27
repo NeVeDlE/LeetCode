@@ -1,5 +1,6 @@
 class Solution {
 public:
+    #define fast() ios_base::sync_with_stdio(0);cout.tie(0);cin.tie(0);srand(time(NULL))
     int BSLeft(int house, vector<int>& heaters){
         int l=0,r=heaters.size()-1,mid;
         int ans=-1;
@@ -32,6 +33,7 @@ public:
     }
     
     int findRadius(vector<int>& houses, vector<int>& heaters) {
+        fast();
         sort(houses.begin(),houses.end());
         sort(heaters.begin(),heaters.end());
               int ans=0;

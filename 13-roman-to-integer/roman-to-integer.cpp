@@ -1,15 +1,10 @@
 class Solution {
 public:
     int romanToInt(string s) {
-    int cnt=0;
-    int last=0;
+        int cnt=0;
     reverse(s.begin(),s.end());
-    cout<<s<<endl;
     for(int i=0;i<s.size();i++){
-        int cur;
-          cout<<cnt<<" "<<s[i]<<endl;
         if(s[i]=='I') cnt+=1;
-      
         else if(s[i]=='V'){
               if(i<s.size()-1&&s[i+1]=='I')cnt+=4,i++;
               else    

@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool isSubsequence(string s, string t) {
-        int r=0,l=0;
+        int r=0;
         for(int i=0;i<t.size();i++){
             if(r>=s.size())break;
             if(s[r]==t[i])r++;

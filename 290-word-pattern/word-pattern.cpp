@@ -9,12 +9,9 @@ public:
             for(int ii=j;ii<t.size();ii++){
                 if(t[ii]==' '||ii==t.size()-1){
                  tmp=t.substr(j,ii-j);
-                 if(ii==t.size()-1){
-                      tmp=t.substr(j,ii-j+1);
-                 }
+                 if(ii==t.size()-1)tmp=t.substr(j,ii-j+1);
                  j=ii+1;
                     break;
-                
                 }
             }
         if(m[s[i]]==""){

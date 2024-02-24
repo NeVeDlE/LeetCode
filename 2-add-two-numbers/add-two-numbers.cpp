@@ -17,7 +17,7 @@ public:
         ListNode* prev_l1=nullptr;
         while(1)
         {
-            cout<<l1->val <<" "<<l2->val<<" "<<carry<<endl;
+        //    cout<<l1->val <<" "<<l2->val<<" "<<carry<<endl;
             if(l1_head)carry+=l1_head->val;
             if(l2_head)carry+=l2_head->val;
             if(!l1_head)

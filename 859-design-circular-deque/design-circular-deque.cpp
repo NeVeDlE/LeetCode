@@ -13,7 +13,6 @@ public:
     MyCircularDeque(int k) {
         sz=k;
         arr=new int[sz];
-        for(int i=0;i<k;i++)arr[i]=-1;
     }
     int next(int n){
      if(n==sz)return 0;

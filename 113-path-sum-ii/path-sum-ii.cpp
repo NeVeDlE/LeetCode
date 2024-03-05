@@ -17,15 +17,12 @@ public:
        if(!cur)return;
        v.push_back(cur->val);
        sum+=cur->val;
-       
        if(sum==t&&!cur->left&&!cur->right)ans.push_back(v);
-       
        solve(cur->left,v,sum,t);
        solve(cur->right,v,sum,t);
     }
     vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
         solve(root,{},0,targetSum);
         return ans;
-      
     }
 };

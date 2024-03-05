@@ -12,10 +12,6 @@
 class Solution {
   
 public:
-  void print_vec(vector<int>&v){
-        for(int i=0;i<v.size();i++)cout<<v[i]<<" ";
-        cout<<endl;
-    }
    vector<vector<int> > ans;
     void solve(TreeNode* cur,vector<int>v,int sum,int t){
        if(!cur)return;
@@ -23,7 +19,7 @@ public:
        sum+=cur->val;
        
        if(sum==t&&!cur->left&&!cur->right)ans.push_back(v);
-       print_vec(v);
+       
        solve(cur->left,v,sum,t);
        solve(cur->right,v,sum,t);
     }

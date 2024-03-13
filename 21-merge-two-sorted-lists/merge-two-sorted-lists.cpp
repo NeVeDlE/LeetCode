@@ -30,16 +30,8 @@ public:
             dummy=dummy->next;
         }
        }
-       while(tmp1){
-        dummy->next=tmp1;
-         dummy=dummy->next;
-        tmp1=tmp1->next;
-       }
-        while(tmp2){
-        dummy->next=tmp2;
-        dummy=dummy->next;
-        tmp2=tmp2->next;
-       }
+      if(tmp1)dummy->next=tmp1;
+      if(tmp2)dummy->next=tmp2;
        return ans->next;
      
     }

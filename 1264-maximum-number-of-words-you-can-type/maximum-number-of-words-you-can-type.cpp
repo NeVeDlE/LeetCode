@@ -19,7 +19,6 @@ public:
             bool f = 0;
             cout << it.first << " " << endl;
             for (int i = 0; i < it.first.size(); i++) {
-
                 for (int j = 0; j < brokenLetters.size(); j++) {
                     if (it.first[i] == brokenLetters[j]) {
                         f = 1;

@@ -4,20 +4,23 @@ public:
         string s = "";
         bool valid = 0;
         int ans = 0;
+        map<char, int> m;
+        for (int i = 0; i < brokenLetters.size(); i++) {
+            m[brokenLetters[i]]++;
+        }
         for (int i = 0; i < text.size(); i++) {
             if (text[i] == ' ') {
                 if (!valid)
                     ans++;
                 valid = 0;
             }
-            for (int j = 0; j < brokenLetters.size(); j++) {
-                if (text[i] == brokenLetters[j]) {
-                    valid = 1;
-                    break;
-                }
+
+            if (m[text[i]]) {
+                valid = 1;
             }
         }
-        if(!valid)ans++;
+        if (!valid)
+            ans++;
 
         return ans;
     }
